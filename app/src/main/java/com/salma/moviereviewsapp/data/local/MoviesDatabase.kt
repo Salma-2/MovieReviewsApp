@@ -1,4 +1,4 @@
-package com.salma.moviereviewsapp.data
+package com.salma.moviereviewsapp.data.local
 
 import androidx.room.Database
 import androidx.room.RoomDatabase

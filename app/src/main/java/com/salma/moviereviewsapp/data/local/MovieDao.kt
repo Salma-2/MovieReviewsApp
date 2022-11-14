@@ -6,7 +6,6 @@ import com.salma.moviereviewsapp.model.Movie
 import com.salma.moviereviewsapp.util.Constants
 import kotlinx.coroutines.flow.Flow
 
-
 @Dao
 interface MovieDao {
     @Query("SELECT * FROM ${Constants.MOVIE_TABLE}")
