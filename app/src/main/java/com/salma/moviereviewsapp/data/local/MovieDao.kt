@@ -1,6 +1,8 @@
 package com.salma.moviereviewsapp.data.local
 
 import androidx.room.Dao
+import androidx.room.Insert
+import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.salma.moviereviewsapp.model.Movie
 import com.salma.moviereviewsapp.util.Constants
@@ -13,4 +15,8 @@ interface MovieDao {
 
     @Query("SELECT * FROM ${Constants.MOVIE_TABLE} WHERE id = :id")
     suspend fun getMovieById(id: Int): Movie
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun insertAll(movies: List<Movie>)
+
 }
