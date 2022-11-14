@@ -2,6 +2,7 @@ package com.salma.moviereviewsapp.di
 
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import com.salma.moviereviewsapp.BuildConfig
+import com.salma.moviereviewsapp.data.remote.NytApi
 import com.salma.moviereviewsapp.util.Constants
 import dagger.Module
 import dagger.Provides
@@ -39,7 +40,6 @@ object NetworkModule {
             .build()
     }
 
-
     @Provides
     @Singleton
     fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
@@ -53,5 +53,11 @@ object NetworkModule {
             .client(okHttpClient)
             .addConverterFactory(json.asConverterFactory(contentType))
             .build()
+    }
+
+    @Provides
+    @Singleton
+    fun provideUnsplashApi(retrofit: Retrofit): NytApi {
+        return retrofit.create(NytApi::class.java)
     }
 }
