@@ -1,4 +1,4 @@
-package com.salma.moviereviewsapp.model
+package com.salma.moviereviewsapp.domain.model
 
 
 data class ApiResponse(

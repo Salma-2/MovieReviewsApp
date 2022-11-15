@@ -1,4 +1,4 @@
-package com.salma.moviereviewsapp.movieslist
+package com.salma.moviereviewsapp.ui.movieslist
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.salma.moviereviewsapp.databinding.ListItemBinding
-import com.salma.moviereviewsapp.model.Movie
+import com.salma.moviereviewsapp.domain.model.Movie
 
 class MovieListAdapter(private val clickListener: OnClickListener) :
     ListAdapter<Movie, MovieListAdapter.MovieViewHolder>(DiffCallback()) {

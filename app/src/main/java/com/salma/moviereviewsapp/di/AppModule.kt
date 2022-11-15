@@ -1,7 +1,7 @@
 package com.salma.moviereviewsapp.di
 
-import com.salma.moviereviewsapp.data.MovieRepository
-import com.salma.moviereviewsapp.data.MovieRepositoryImpl
+import com.salma.moviereviewsapp.domain.repository.MovieRepository
+import com.salma.moviereviewsapp.domain.repository.MovieRepositoryImpl
 import com.salma.moviereviewsapp.data.local.MoviesDatabase
 import com.salma.moviereviewsapp.data.remote.NytApi
 import dagger.Module

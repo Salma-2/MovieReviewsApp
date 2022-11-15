@@ -1,4 +1,4 @@
-package com.salma.moviereviewsapp.model
+package com.salma.moviereviewsapp.domain.model
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName

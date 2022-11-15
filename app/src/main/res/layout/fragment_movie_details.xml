@@ -6,14 +6,14 @@
     <data>
         <variable
             name="movie"
-            type="com.salma.moviereviewsapp.model.Movie" />
+            type="com.salma.moviereviewsapp.domain.model.Movie" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/details_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".moviedetails.MovieDetailsFragment">
+        tools:context=".ui.moviedetails.MovieDetailsFragment">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"

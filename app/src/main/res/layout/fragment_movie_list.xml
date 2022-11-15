@@ -7,14 +7,14 @@
 
         <variable
             name="viewModel"
-            type="com.salma.moviereviewsapp.movieslist.MovieListViewModel" />
+            type="com.salma.moviereviewsapp.ui.movieslist.MovieListViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/movie_list_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".movieslist.MovieListFragment">
+        tools:context=".ui.movieslist.MovieListFragment">
 
 
         <androidx.recyclerview.widget.RecyclerView

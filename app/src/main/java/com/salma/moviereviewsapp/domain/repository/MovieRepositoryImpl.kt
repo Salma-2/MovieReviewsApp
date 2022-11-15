@@ -1,8 +1,8 @@
-package com.salma.moviereviewsapp.data
+package com.salma.moviereviewsapp.domain.repository
 
 import com.salma.moviereviewsapp.data.local.MovieDao
 import com.salma.moviereviewsapp.data.remote.NytApi
-import com.salma.moviereviewsapp.model.Movie
+import com.salma.moviereviewsapp.domain.model.Movie
 import kotlinx.coroutines.flow.Flow
 
 class MovieRepositoryImpl(

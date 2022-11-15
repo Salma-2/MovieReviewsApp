@@ -4,7 +4,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.salma.moviereviewsapp.model.Movie
+import com.salma.moviereviewsapp.domain.model.Movie
 import com.salma.moviereviewsapp.util.Constants
 import kotlinx.coroutines.flow.Flow
 

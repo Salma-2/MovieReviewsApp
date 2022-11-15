@@ -6,9 +6,9 @@ import androidx.appcompat.content.res.AppCompatResources
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.salma.moviereviewsapp.R
-import com.salma.moviereviewsapp.model.Movie
-import com.salma.moviereviewsapp.model.MovieMultimedia
-import com.salma.moviereviewsapp.movieslist.MovieListAdapter
+import com.salma.moviereviewsapp.domain.model.Movie
+import com.salma.moviereviewsapp.domain.model.MovieMultimedia
+import com.salma.moviereviewsapp.ui.movieslist.MovieListAdapter
 import com.squareup.picasso.Picasso
 
 @BindingAdapter("loadData")

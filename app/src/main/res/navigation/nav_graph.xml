@@ -7,16 +7,16 @@
 
     <fragment
         android:id="@+id/movieDetailsFragment"
-        android:name="com.salma.moviereviewsapp.moviedetails.MovieDetailsFragment"
+        android:name="com.salma.moviereviewsapp.ui.moviedetails.MovieDetailsFragment"
         tools:layout="@layout/fragment_movie_details"
         android:label="MovieDetailsFragment" >
         <argument
             android:name="movie"
-            app:argType="com.salma.moviereviewsapp.model.Movie" />
+            app:argType="com.salma.moviereviewsapp.domain.model.Movie" />
     </fragment>
     <fragment
         android:id="@+id/movieListFragment"
-        android:name="com.salma.moviereviewsapp.movieslist.MovieListFragment"
+        android:name="com.salma.moviereviewsapp.ui.movieslist.MovieListFragment"
         tools:layout="@layout/fragment_movie_list"
         android:label="MovieListFragment" >
         <action

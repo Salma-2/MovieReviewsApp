@@ -7,11 +7,11 @@
 
         <variable
             name="movie"
-            type="com.salma.moviereviewsapp.model.Movie" />
+            type="com.salma.moviereviewsapp.domain.model.Movie" />
 
         <variable
             name="clickListener"
-            type="com.salma.moviereviewsapp.movieslist.MovieListAdapter.OnClickListener" />
+            type="com.salma.moviereviewsapp.ui.movieslist.MovieListAdapter.OnClickListener" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

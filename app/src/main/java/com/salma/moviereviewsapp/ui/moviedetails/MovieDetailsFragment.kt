@@ -1,4 +1,4 @@
-package com.salma.moviereviewsapp.moviedetails
+package com.salma.moviereviewsapp.ui.moviedetails
 
 import android.os.Bundle
 import android.view.LayoutInflater

@@ -1,4 +1,4 @@
-package com.salma.moviereviewsapp.movieslist
+package com.salma.moviereviewsapp.ui.movieslist
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -29,8 +29,7 @@ class MovieListFragment() : Fragment() {
 
         val adapter = MovieListAdapter(MovieListAdapter.OnClickListener { movie ->
             findNavController().navigate(
-                MovieListFragmentDirections
-                    .actionMovieListFragmentToMovieDetailsFragment(movie))
+                MovieListFragmentDirections.actionMovieListFragmentToMovieDetailsFragment(movie))
         })
 
         binding.movieRv.adapter = adapter
