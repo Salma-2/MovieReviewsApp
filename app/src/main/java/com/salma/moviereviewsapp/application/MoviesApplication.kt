@@ -1,4 +1,4 @@
-package com.salma
+package com.salma.moviereviewsapp.application
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
