@@ -10,4 +10,6 @@ import kotlinx.serialization.Serializable
 data class MovieMultimedia(
     @SerializedName("src")
     val imgUrl: String,
+    val width: Int,
+    val height: Int,
 ) : Parcelable

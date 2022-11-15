@@ -9,6 +9,8 @@ import com.salma.moviereviewsapp.model.Movie
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.catch
 import com.salma.moviereviewsapp.movieslist.MovieListEvents.OnMovieClick
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -16,8 +18,16 @@ import javax.inject.Inject
 class MovieListViewModel @Inject constructor(
     private val repository: MovieRepository,
 ) : ViewModel() {
-    val movies: LiveData<List<Movie>> = repository
-        .getAllMovies()
-        .catch { }
-        .asLiveData()
+    val movies: LiveData<List<Movie>> by lazy {
+        repository
+            .getAllMovies()
+            .catch { }
+            .asLiveData()
+    }
+
+    init {
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.refreshMovies()
+        }
+    }
 }
