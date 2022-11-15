@@ -17,11 +17,7 @@ class MovieRepositoryImpl(
         dao.insertAll(movies.results)
     }
 
-    override suspend fun getMovie(id: Int): Movie {
-        return dao.getMovieById(id)
-    }
-
-    override suspend fun getAllMovies(): Flow<List<Movie>> {
+    override fun getAllMovies(): Flow<List<Movie>> {
         return dao.getMovies()
     }
 }
