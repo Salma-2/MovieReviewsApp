@@ -11,13 +11,5 @@ Add you api key in the `gradle.properties`
 ```properties
 API_KEY="your-key"
 ```
-or you can place it [here](https://github.com/Salma-2/MovieReviewsApp/blob/master/app/src/main/java/com/salma/moviereviewsapp/di/NetworkModule.kt) (for test purpose)
-```kotlin
-fun provideHttpClient(): OkHttpClient{
-  ...
-  .addQueryParameter("api-key", BuildConfig.API_KEY)
-  ...
-}
-```
 
 
