@@ -1,7 +1,7 @@
 package com.salma.moviereviewsapp.model
 
 
-data class Result(
+data class ApiResponse(
     val results: List<Movie>,
     val status: String,
 )
