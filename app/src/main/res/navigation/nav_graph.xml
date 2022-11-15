@@ -9,7 +9,11 @@
         android:id="@+id/movieDetailsFragment"
         android:name="com.salma.moviereviewsapp.moviedetails.MovieDetailsFragment"
         tools:layout="@layout/fragment_movie_details"
-        android:label="MovieDetailsFragment" />
+        android:label="MovieDetailsFragment" >
+        <argument
+            android:name="movie"
+            app:argType="com.salma.moviereviewsapp.model.Movie" />
+    </fragment>
     <fragment
         android:id="@+id/movieListFragment"
         android:name="com.salma.moviereviewsapp.movieslist.MovieListFragment"
