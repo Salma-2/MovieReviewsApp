@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MovieReviewsApp</string>
+    <string name="app_name">Movie Reviews</string>
     <string name="img_content_desc">an image for the movie</string>
     <string name="title">Title</string>
     <string name="published_by">Published By</string>
