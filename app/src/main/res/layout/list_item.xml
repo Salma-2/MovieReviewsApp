@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="movie"
+            type="com.salma.moviereviewsapp.model.Movie" />
+
+        <variable
+            name="clickListener"
+            type="com.salma.moviereviewsapp.movieslist.MovieListAdapter.OnClickListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{() -> clickListener.onClick(movie)}">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:elevation="10dp"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/movieImg_listItem"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:scaleType="centerCrop"
+                tools:srcCompat="@tools:sample/avatars" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/titleTv_listItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@{movie.title}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintStart_toEndOf="@+id/cardView"
+            app:layout_constraintTop_toTopOf="@+id/cardView" />
+
+        <TextView
+            android:id="@+id/reviewerTv_listItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@{movie.reviewer}"
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="@+id/titleTv_listItem"
+            app:layout_constraintTop_toBottomOf="@+id/titleTv_listItem" />
+
+        <TextView
+            android:id="@+id/dateTv_listItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:text="@{movie.date}"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="@+id/cardView"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
